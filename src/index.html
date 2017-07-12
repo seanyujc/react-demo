@@ -34,7 +34,7 @@
     }
   </style>
   <% for(let o of htmlWebpackPlugin.options.dlls ){ %>
-    <script src="./<%= o %>.js"></script>
+    <script src="http://<%= DOMAIN + PUBLIC_PATH + o %>.js"></script>
     <% } %>
 </head>
 

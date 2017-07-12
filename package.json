@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "node ./build/dev-server.js",
-    "build": "webpack -p --colors",
+    "build": "cross-env DOMAIN='a.pc.seage.net' cross-env PUBLIC_PATH=/demo/ webpack -p --colors",
     "postbuild": "npm run cpdll",
     "build:dll": "webpack -p --config=webpack.dll.conf.js",
     "precpdll":"mkdirp ./dist/dll",

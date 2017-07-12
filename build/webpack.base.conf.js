@@ -36,7 +36,7 @@ module.exports = {
           use: [{
             loader: 'css-loader'
           },
-          'autoprefixer-loader?{browsers: ["last 2 versions", "ie 8", "ie 9"]}']
+            'autoprefixer-loader?{browsers: ["last 2 versions", "ie 8", "ie 9"]}']
         })
       }
     ]
@@ -47,7 +47,10 @@ module.exports = {
     //     filename: 'js/vendor.js',
     //     minChunks: 2
     //   }),
-
+    new webpack.DefinePlugin({
+      'DOMAIN': JSON.stringify(process.env.DOMAIN),
+      'PUBLIC_PATH': JSON.stringify(process.env.PUBLIC_PATH)
+    }),
     new ExtractTextPlugin({
       filename: 'style.css',
       allChunks: true

@@ -7,9 +7,11 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 // const _path = path.relative(__dirname,'')
 // console.log(path.resolve(__dirname, '../'));
+// console.log(process.env.DOMAIN)
+const publicPath = process.env.PUBLIC_PATH || '/demo/'
 module.exports = merge(baseWebpackConfig, {
   output: {
-    publicPath: '/demo/'
+    publicPath
   },
   module: {
     rules: [
@@ -48,6 +50,7 @@ module.exports = merge(baseWebpackConfig, {
       template: path.resolve(__dirname, '../src/index.html'),
       dlls: ['dll/main-dll', 'dll/plugins-dll', 'dll/assets-dll']
     }),
+    
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false
