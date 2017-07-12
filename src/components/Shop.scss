@@ -1,0 +1,47 @@
+.shop {
+  .panel-heading {
+    font-size: 18px;
+  }
+  .panel-body {
+    padding: 0;
+  }
+  .more {
+    font-size: 12px;
+    line-height: 24px;
+  }
+  .body {
+    height: 588px;
+    position: relative;
+  }
+  .body-table {
+    width: 100%;
+  }
+  .table {
+    th {
+      text-align: center;
+      font-size: 12px;
+      font-weight: normal;
+    }
+    tbody {
+      tr:nth-of-type(odd) {
+        // background-color: inherit;
+        td {
+          border-bottom: 1px solid white;
+        }
+      }
+      tr:nth-of-type(even) {
+        background-color: #f9f9f9;
+        td {
+          border-bottom: 1px solid #ddd;
+        }
+      }
+      tr:hover {
+        background-color: #ffd159;
+      }
+      td {
+        font-size: 14px;
+        line-height: 26px;
+      }
+    }
+  }
+}

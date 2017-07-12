@@ -1,0 +1,43 @@
+.header {
+  line-height: 70px;
+  border-bottom: 1px solid #ccc;
+  .logo{
+    border-right: 1px solid #ccc;
+  }
+  .nav{
+    text-align: center;
+    li{
+      cursor: pointer;
+    }
+  }
+  .search-box {
+    width: 226px;
+    border-radius: 15px;
+    height: 30px;
+    position: relative;
+    top: 19px;
+    background: url('../assets/images/search.png') no-repeat;
+    background-size: 30px 30px;
+    background-position: right;
+  }
+  .user-bar{
+    margin: 0;
+    .dialog{
+      font-size: 32px;
+    }
+    .portrait{
+      img{
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+      }
+    }
+    .account{
+
+    }
+    .off{
+      font-size: 28px;
+      opacity: .4;
+    }
+  }
+}

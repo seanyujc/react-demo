@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    .icon {
+      width: 1em;
+      height: 1em;
+      vertical-align: -0.15em;
+      fill: currentColor;
+      overflow: hidden;
+    }
+
+    .tooltip {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .tooltip i {
+      font-style: normal;
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+      background-color: #4fe3c1;
+      margin-right: 5px;
+    }
+
+    .tooltip i.i1 {
+      background-color: #6e7ff3;
+    }
+  </style>
+  <% for(let o of htmlWebpackPlugin.options.dlls ){ %>
+    <script src="./<%= o %>.js"></script>
+    <% } %>
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+
+</html>
